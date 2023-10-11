@@ -20,7 +20,7 @@
         src: info.php
         dest: /var/www/html/info.php
     - name: restart apache2
-      ansible.builtin.systemd
+      ansible.builtin.systemd: 
         name: apache2
         state: restarted
 
