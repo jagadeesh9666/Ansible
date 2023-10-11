@@ -1,0 +1,26 @@
+---
+- name: lamp-server
+  hosts: all
+  become: yes
+  tasks: 
+    - name: install apache2
+      apt: 
+        name: apache2
+        state: present
+    - name: install php
+      apt: 
+        name: 
+          - php 
+          - libapache2-mod-php 
+          - php-mysql
+        state: present
+    - name: copy info.php to the destination
+      ansible.builtin.copy:
+        src: ./info.php
+        dest: /var/www/html/info.php
+    - name: restart apache2
+      ansible.builtin.systemd
+        name: apache2
+        state: restart
+
+      
