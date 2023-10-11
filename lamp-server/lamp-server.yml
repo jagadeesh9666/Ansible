@@ -21,6 +21,6 @@
     - name: restart apache2
       ansible.builtin.systemd
         name: apache2
-        state: restart
+        state: restarted
 
       
