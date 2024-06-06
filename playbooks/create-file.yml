@@ -5,5 +5,5 @@
   tasks: 
     - name: create a text file
       ansible.builtin.file:
-        path: '~/text'
+        path: '~/1.text'
         state: file
