@@ -5,5 +5,5 @@
   tasks:
     - name: create file
       ansible.builtin.file:
-        path: '/tmp/1.txt'
-        state: file
+        path: ~/1.txt
+        state: touch
