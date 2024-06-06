@@ -1,6 +1,6 @@
 ---
 - name: create a file
-  become: false
+  become: true
   hosts: key
   tasks: 
     - name: create a text file
