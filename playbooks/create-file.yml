@@ -1,0 +1,9 @@
+---
+- name: create a file
+  become: false
+  hosts: key
+  tasks: 
+    - name: create a text file
+      ansible.builtin.file:
+        path: ~/text
+        state: file
